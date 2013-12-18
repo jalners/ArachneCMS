@@ -16,3 +16,4 @@ CONTACTS
 E-mail: contact@arachne-cms.com
 Twitter: https://twitter.com/ArachneCMS
 Facebook: https://www.facebook.com/arachne.cms
+Google+: https://plus.google.com/110222482927781791587
