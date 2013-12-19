@@ -1,0 +1,179 @@
+﻿body {
+}
+
+@colorBackground: #4b4c4d;
+@colorFont: #fff;
+@colorHighlight: #e7402f;
+@colorLink: #6af;
+
+@fontSans: OpenSans, Arial, sans-serif;
+@fontSansCond: OpenSansCond, "Arial Narrow", sans-serif;
+@fontCode: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+
+.include-font(@file, @family: arial, @weight: normal, @style: normal){
+    @font-face{
+        font-family: @family;
+        src: url('/UI/fonts/@{file}.eot');
+        src: url('/UI/fonts/@{file}.eot?#iefix') format('embedded-opentype'),
+             url('/UI/fonts/@{file}.woff') format('woff'),
+             url('/UI/fonts/@{file}.ttf') format('truetype'),
+             url('/UI/fonts/@{file}.svg#font') format('svg');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+.borders-rounded (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.include-font("OpenSans-Light", "OpenSans", 300, normal);
+.include-font("OpenSans-Regular", "OpenSans", 400, normal);
+/*.include-font("OpenSans-Bold", "OpenSans", 700, normal);*/
+/*.include-font("OpenSans-Extrabold", "OpenSans", 900, normal);*/
+/*.include-font("OpenSansCond-Light", "OpenSansCond", 300, normal);*/
+.include-font("OpenSansCond-Bold", "OpenSansCond", 700, normal);
+
+body {
+    font-family: @fontSans;
+    color: @colorFont;
+}
+
+#wrap.boxed {
+    background-color: @colorBackground;
+}
+
+.logo {
+    font-size: 32px;
+    font-family: @fontSansCond;
+    font-weight:700;
+
+    img {
+        float:left;
+        margin-top: -15px;
+        margin-right: 8px;
+    }
+
+    sup {
+        font-family: @fontSansCond;
+        font-size: 18px;
+        vertical-align: super;
+        margin-left: 6px;
+        color: #999;
+    }
+}
+
+.page-title {
+    background: @colorHighlight;
+    padding:32px 0 20px 0;
+    margin-bottom: 32px;
+
+    h1 {
+        margin-bottom: 0;
+        font-weight: 300;
+        font-size: 36px;
+        color: #fff;
+    }
+
+    ::selection {
+        background: darken(@colorHighlight, 30%);
+    }
+
+    .breadcrumb {
+        a {
+            float: left;
+            font-size: 12px;
+            color: darken(@colorHighlight, 30%);
+        }
+
+        li + li a:before {
+            content: "\2192";
+            margin: 0 8px;
+        }
+    }
+}
+
+.main-content {
+    font-size: 14px;
+    line-height: 20px;
+
+    h2 {
+        font-size: 28px;
+        font-family: @fontSansCond;
+        font-weight: 300;
+        /*font-weight: normal;*/
+        -webkit-text-stroke: 0.1px; /*TODO:Chrome anti-aliasing fix*/
+        border-bottom: solid 1pt #666;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        text-align: justify;
+
+        & + p {
+            margin-top: 16px;
+        }
+    }
+
+    blockquote {
+        margin: 16px 0;
+    }
+
+    a {
+        color: @colorLink;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ol {
+        padding-left: 40px;
+
+        li {
+            list-style: decimal;
+        }
+    }
+}
+
+code {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: #222;
+    padding: 16px;
+    white-space: pre;
+    font-family: @fontCode;
+    margin: 16px 0;
+    color: #fff;
+    line-height: 20px;
+    .borders-rounded(5px);
+
+    em {
+        color: #facd22;
+        font-style: normal;
+    }
+
+    q {
+        color: #3b6;
+    }
+}
+
+#menu {
+    a {
+        font-family: @fontSansCond;
+        font-size: 16px;
+    }
+}
+
+.todo {
+    background: @colorHighlight;
+    padding: 16px;
+    margin: 8px 0;
+    .borders-rounded(5px);
+}
