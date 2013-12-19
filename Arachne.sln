@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WWW", "WWW", "{15897C75-4A0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5186B935-96F9-4CD8-8A50-006990E03F2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandora", "Pandora\Pandora.csproj", "{20ED8550-60C2-4833-96E3-B7C0CA08C323}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20ED8550-60C2-4833-96E3-B7C0CA08C323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20ED8550-60C2-4833-96E3-B7C0CA08C323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20ED8550-60C2-4833-96E3-B7C0CA08C323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20ED8550-60C2-4833-96E3-B7C0CA08C323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

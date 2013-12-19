@@ -1,6 +1,9 @@
 *.suo
 *.user
 
+/Pandora/bin/
+/Pandora/obj/
+
 /Tests/bin/
 /Tests/obj/
 
