@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Commands\CommandException.cs" />
+    <Compile Include="Design\Commands\CommandExecutionException.cs" />
+    <Compile Include="Design\Commands\ICommand.cs" />
+    <Compile Include="Design\Commands\IMacroCommand.cs" />
+    <Compile Include="Design\Commands\MacroCommand.cs" />
+    <Compile Include="Design\Commands\NullCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
