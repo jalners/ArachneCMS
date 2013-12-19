@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arachne-cms", "WWW\com.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WWW", "WWW", "{15897C75-4A00-4E65-A82F-3F47E9364B4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5186B935-96F9-4CD8-8A50-006990E03F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E5CEB5B7-E34E-4A23-9E62-063D25C91973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5CEB5B7-E34E-4A23-9E62-063D25C91973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5CEB5B7-E34E-4A23-9E62-063D25C91973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5186B935-96F9-4CD8-8A50-006990E03F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

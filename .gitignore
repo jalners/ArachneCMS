@@ -1,5 +1,8 @@
 *.suo
 *.user
 
+/Tests/bin/
+/Tests/obj/
+
 /WWW/com.arachne-cms/bin/
 /WWW/com.arachne-cms/obj/
