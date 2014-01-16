@@ -35,23 +35,20 @@ namespace Pandora.Design.Commands
         /// <param name="command"></param>
         public void Add(ICommand command)
         {
+            if (command == null)
+            {
+                throw new ArgumentException("command");
+            }
+
             this.Commands.Add(command);
         }
 
         #region -- IEnumerable interface implementation -------------------------------------------
-        /// <summary>
-        /// TODO:This is for collection initializer
-        /// </summary>
-        /// <returns></returns>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.Commands.GetEnumerator();
         }
 
-        /// <summary>
-        /// TODO:This is for collection initializer
-        /// </summary>
-        /// <returns></returns>
         IEnumerator<ICommand> IEnumerable<ICommand>.GetEnumerator()
         {
             return this.Commands.GetEnumerator();
@@ -59,9 +56,6 @@ namespace Pandora.Design.Commands
         #endregion -------------------------------------------------------------------------------
 
         #region -- ICommand interface implenentation ----------------------------------------------
-        /// <summary>
-        /// TODO:
-        /// </summary>
         void ICommand.Execute()
         {
             ICommand lastCommand = null;

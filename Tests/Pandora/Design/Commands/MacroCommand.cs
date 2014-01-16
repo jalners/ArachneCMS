@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Moq;
+using NSubstitute;
 
 namespace Pandora.Design.Commands
 {
@@ -15,7 +15,7 @@ namespace Pandora.Design.Commands
         /// TODO:
         /// </summary>
         [Test]
-        public void Commands_CreateEmptyCollection()
+        public void Commands_EmptyWhenCreated()
         {
             MacroCommand command = new MacroCommand();
             Assert.IsNotNull(command.Commands);
@@ -26,62 +26,89 @@ namespace Pandora.Design.Commands
         /// TODO:
         /// </summary>
         [Test]
-        public void Execute_CheckProperExecution()
+        public void Add_ItemsAdded()
         {
-            int sum = 0;
-
-            var mockCommand1 = new Mock<ICommand>();
-            mockCommand1.Setup(command => command.Execute()).Callback(() => sum += 1);
+            MacroCommand macro = new MacroCommand();
+            ICommand command1 = Substitute.For<ICommand>(); 
             
-            var mockCommand2 = new Mock<ICommand>();
-            mockCommand2.Setup(command => command.Execute()).Callback(() => sum += 2);
-            
-            var mockCommand3 = new Mock<ICommand>();
-            mockCommand3.Setup(command => command.Execute()).Callback(() => sum += 3);
+            macro.Add(command1);
+            Assert.AreEqual(macro.Commands.Count, 1);
+            Assert.AreSame(command1, macro.Commands[0]);
 
-            IMacroCommand macroCommand = new MacroCommand()
-            {
-                mockCommand1.Object,
-                mockCommand2.Object,
-                mockCommand3.Object
-            };
-
-            Assert.AreEqual(macroCommand.Commands.Count, 3);
-
-            macroCommand.Execute();
-            Assert.AreEqual(sum, 6);
+            ICommand command2 = Substitute.For<ICommand>();
+            macro.Add(command2);
+            Assert.AreEqual(macro.Commands.Count, 2);
+            Assert.AreSame(command2, macro.Commands[1]);
         }
 
         /// <summary>
         /// TODO:
         /// </summary>
         [Test]
-        public void Execute_CheckFailedExecution()
+        public void Add_NullCommand_Exception()
         {
-            int sum = 0;
-            Exception exception = new Exception();
+            MacroCommand macro = new MacroCommand();
+            Assert.Catch<ArgumentException>(() => macro.Add(null));
+        }
 
-            var mockCommand1 = new Mock<ICommand>();
-            mockCommand1.Setup(command => command.Execute()).Callback(() => sum += 1);
-            
-            var mockCommand2 = new Mock<ICommand>();
-            mockCommand2.Setup(command => command.Execute()).Callback(() =>
-            {
-                throw new CommandExecutionException(mockCommand2.Object, exception);
-            });
-            
-            var mockCommand3 = new Mock<ICommand>();
-            mockCommand3.Setup(command => command.Execute()).Callback(() => sum += 3);
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        [Test]
+        public void Execute_ProperExecutionSequence()
+        {
+            string result = string.Empty;
 
-            ICommand macroCommand = new MacroCommand()
+            var command1 = Substitute.For<ICommand>();
+            command1.When(command => command.Execute()).Do((info) => result += "1");
+
+            var command2 = Substitute.For<ICommand>();
+            command2.When(command => command.Execute()).Do((info) => result += "2");
+
+            var command3 = Substitute.For<ICommand>();
+            command3.When(command => command.Execute()).Do((info) => result += "3");
+
+            IMacroCommand macroCommand = new MacroCommand()
             {
-                mockCommand1.Object,
-                mockCommand2.Object,
-                mockCommand3.Object
+                command1,
+                command2,
+                command3
             };
 
-            Assert.Throws<CommandExecutionException>(() => macroCommand.Execute());
-            Assert.AreEqual(sum, 1);
+            macroCommand.Execute();
+            Assert.AreEqual(result, "123");
+        }
+
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        [Test]
+        public void Execute_CommndRaisedException()
+        {
+            string result = string.Empty;
+            Exception exception = new Exception();
+
+            var command1 = Substitute.For<ICommand>();
+            command1.When(command => command.Execute()).Do((info) => result += "1");
+
+            var command2 = Substitute.For<ICommand>();
+            command2.When(command => command.Execute()).Do((info) =>
+            {
+                throw new CommandExecutionException(command2, exception);
+            });
+
+            var command3 = Substitute.For<ICommand>();
+            command3.When(command => command.Execute()).Do((info) => result += "3");
+
+            ICommand macro = new MacroCommand()
+            {
+                command1,
+                command2,
+                command3
+            };
+
+            Assert.Throws<CommandExecutionException>(() => macro.Execute());
+            Assert.AreEqual(result, "1");
         }
     }
 }

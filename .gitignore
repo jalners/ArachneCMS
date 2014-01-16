@@ -1,5 +1,7 @@
 *.suo
 *.user
+*.ncrunch*
+_NCrunch_*
 
 /Pandora/bin/
 /Pandora/obj/

@@ -1,7 +1,7 @@
 ﻿///TODO:
 using System;
-using Moq;
 using NUnit.Framework;
+using NSubstitute;
 
 namespace Pandora.Design.Commands
 {
@@ -14,14 +14,15 @@ namespace Pandora.Design.Commands
         /// TODO:
         /// </summary>
         [Test]
-        public void Constructor_WithCommandAndException()
+        public void Ctor_WithCommandAndException_PropsEqual()
         {
-            var command = new Mock<ICommand>();
+            //TODO:DRY (CommandExecutionExceptionTest.Ctor_WithCommandAndException_PropsEqual)
+            var command = Substitute.For<ICommand>();
             var innerException = new Exception();
 
-            CommandException exception = new CommandException(command.Object, innerException);
+            CommandException exception = new CommandException(command, innerException);
             Assert.AreSame(exception.InnerException, innerException);
-            Assert.AreSame(exception.Command, command.Object);
+            Assert.AreSame(exception.Command, command);
         }
     }
 }
