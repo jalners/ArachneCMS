@@ -1,0 +1,22 @@
+﻿@model WWW.ViewModels.PageMetaModel
+<title>@Model.Title</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+@if (Model.HasDescription)
+{
+    <meta name="description" content="@Model.Description" />
+}
+@if (Model.HasKeywords)
+{
+    <meta name="keywords" content="@Model.Keywords" />
+}
+@if (Model.HasRobots)
+{
+    <meta name="robots" content="@Model.Robots" />
+}
+@if (Model.HasAuthor)
+{
+    <meta name="author" content="@Model.Author" />
+}

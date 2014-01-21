@@ -430,6 +430,7 @@
     <Content Include="UI\fonts\OpenSansCond-LightItalic.ttf" />
     <Content Include="UI\fonts\OpenSansCond-LightItalic.woff" />
     <Content Include="Views\Shared\Counters.cshtml" />
+    <Content Include="Views\Shared\HeaderMeta.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

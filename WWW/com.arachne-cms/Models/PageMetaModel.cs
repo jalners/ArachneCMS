@@ -57,6 +57,15 @@ namespace WWW.ViewModels
         /// <summary>
         /// TODO:
         /// </summary>
+        public string Author
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// TODO:
+        /// </summary>
         public bool HasDescription
         {
             get
@@ -73,6 +82,17 @@ namespace WWW.ViewModels
             get
             {
                 return !string.IsNullOrWhiteSpace(this.Keywords);
+            }
+        }
+
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public bool HasAuthor
+        {
+            get
+            {
+                return !string.IsNullOrWhiteSpace(this.Author);
             }
         }
 
