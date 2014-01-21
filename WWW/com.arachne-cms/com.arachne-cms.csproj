@@ -115,6 +115,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PageMetaModel.cs" />
+    <Compile Include="Models\PageModel.cs" />
+    <Compile Include="Models\PageModel.T.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -293,7 +296,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="content\blog\" />
     <Folder Include="content\reference\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
