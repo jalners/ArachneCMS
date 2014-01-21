@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReferenceController.cs" />
     <Compile Include="Global.asax.cs">
@@ -419,6 +420,9 @@
     <Content Include="Views\Shared\SocialIcons.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\about\vision.ru.cshtml" />
+    <Content Include="content\Web.config" />
+    <Content Include="content\_ViewStart.cshtml" />
     <None Include="Properties\PublishProfiles\www.arachne-cms.com %28debug%29.pubxml" />
     <Content Include="UI\fonts\OpenSansCond-Bold.eot" />
     <Content Include="UI\fonts\OpenSansCond-Bold.ttf" />
