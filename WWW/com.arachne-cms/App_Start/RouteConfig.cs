@@ -13,6 +13,7 @@ namespace WWW
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(name: "ContentAboutImage", url: "{language}/about/{id}/{image}", defaults: new { controller = "Content", action = "Image", category = "about", id = UrlParameter.Optional });
             routes.MapRoute(name: "ContentAbout", url: "{language}/about/{id}", defaults: new { controller = "Content", action = "Index", category = "about", id = UrlParameter.Optional });
 
             routes.MapRoute(name: "ReferenceGet", url: "reference/{*id}", defaults: new { controller = "Reference", action = "Index", id = UrlParameter.Optional });

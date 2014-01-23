@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
   font-family: "OpenSans";
   src: url('/UI/fonts/OpenSans-Light.eot');
   src: url('/UI/fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('/UI/fonts/OpenSans-Light.woff') format('woff'), url('/UI/fonts/OpenSans-Light.ttf') format('truetype'), url('/UI/fonts/OpenSans-Light.svg#font') format('svg');
@@ -71,7 +71,7 @@ body {
 }
 .main-content {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 16px;
 }
 .main-content h2 {
   font-size: 28px;

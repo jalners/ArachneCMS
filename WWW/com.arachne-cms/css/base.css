@@ -1,46 +1,3 @@
-/*
-* Theme Name: Invention
-* Theme URI: http://www.jozoor.com
-* Description: Invention Theme for corporate and creative sites, responsive and clean layout, more than color skins
-* Author: Jozoor team
-* Author URI: http://www.jozoor.com
-* Version: 1.0
-*/
-
-/*
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
-=     00   00 00 00   00 00 00   00 00 00   00 00 00   00 00    =
-=     00   00    00        00    00    00   00    00   00       =
-=     00   00    00      00      00    00   00    00   00       =
-=     00   00    00    00        00    00   00    00   00       =
-=  00 00   00 00 00   00 00 00   00 00 00   00 00 00   00       =
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-*/
-
-/* using standard base style by Skeleton and adding another new codes */
-
-/*
-* Skeleton V1.2
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 6/20/2012
-*/
-
-
-/* Table of Content
-==================================================
-	#Reset & Basics
-	#Basic Styles
-	#Main Fonts
-	#Main Colors & Backgrounds
-	#Aligns
-	#Typography
-	#Links
-	#Images
-	#Forms */
-
 /* Reset & Basics (Inspired by E. Meyers)
 ================================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -107,7 +64,7 @@ input[type='submit']
 }
 
 p, blockquote {
-	line-height: 23px;
+	line-height: 22px;
 }
 
 blockquote {
