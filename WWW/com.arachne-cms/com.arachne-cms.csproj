@@ -426,6 +426,7 @@
     <Content Include="content\_ViewStart.cshtml" />
     <Content Include="content\blog\2014\01\30\ru.prostota-koda.cshtml" />
     <Content Include="content\blog\_ViewStart.cshtml" />
+    <Content Include="content\contact\stanislav-yarmonov\ru.cshtml" />
     <None Include="Properties\PublishProfiles\www.arachne-cms.com %28debug%29.pubxml" />
     <Content Include="UI\fonts\OpenSansCond-Bold.eot" />
     <Content Include="UI\fonts\OpenSansCond-Bold.ttf" />
