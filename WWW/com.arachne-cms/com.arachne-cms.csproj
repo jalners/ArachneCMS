@@ -126,6 +126,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="content\about\vision\values.jpg" />
+    <Content Include="content\blog\2014\01\30\dzen.jpg" />
     <Content Include="css\base.css" />
     <Content Include="css\bg\back_pattern.jpg" />
     <Content Include="css\bg\black_mamba.jpg" />
@@ -296,7 +297,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\blog\" />
     <Folder Include="content\reference\" />
   </ItemGroup>
   <ItemGroup>
@@ -424,6 +424,7 @@
     <Content Include="content\about\vision\ru.cshtml" />
     <Content Include="content\Web.config" />
     <Content Include="content\_ViewStart.cshtml" />
+    <Content Include="content\blog\2014\01\30\ru.prostota-koda.cshtml" />
     <None Include="Properties\PublishProfiles\www.arachne-cms.com %28debug%29.pubxml" />
     <Content Include="UI\fonts\OpenSansCond-Bold.eot" />
     <Content Include="UI\fonts\OpenSansCond-Bold.ttf" />
