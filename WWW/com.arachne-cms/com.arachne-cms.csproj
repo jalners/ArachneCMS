@@ -425,6 +425,7 @@
     <Content Include="content\Web.config" />
     <Content Include="content\_ViewStart.cshtml" />
     <Content Include="content\blog\2014\01\30\ru.prostota-koda.cshtml" />
+    <Content Include="content\blog\_ViewStart.cshtml" />
     <None Include="Properties\PublishProfiles\www.arachne-cms.com %28debug%29.pubxml" />
     <Content Include="UI\fonts\OpenSansCond-Bold.eot" />
     <Content Include="UI\fonts\OpenSansCond-Bold.ttf" />
@@ -437,6 +438,7 @@
     <Content Include="UI\fonts\OpenSansCond-LightItalic.woff" />
     <Content Include="Views\Shared\Counters.cshtml" />
     <Content Include="Views\Shared\HeaderMeta.cshtml" />
+    <Content Include="Views\Blog\_Layout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

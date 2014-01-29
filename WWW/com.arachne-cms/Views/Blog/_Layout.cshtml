@@ -1,0 +1,9 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@RenderBody()
+
+<div class="container main-content clearfix top-3">
+    <div class="fb-comments" data-href="@(this.Request.Url)" data-numposts="10" data-colorscheme="dark"></div>
+</div>
