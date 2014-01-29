@@ -1,6 +1,7 @@
 ﻿///TODO:
 using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace WWW.ViewModels
 {
@@ -132,6 +133,23 @@ namespace WWW.ViewModels
                 }
 
                 return result.ToString();
+            }
+        }
+
+        private Dictionary<string, string> _OpenGraph = null;
+        /// <summary>
+        /// TODO:
+        /// </summary>
+        public Dictionary<string, string> OpenGraph
+        {
+            get
+            {
+                if (_OpenGraph == null)
+                {
+                    _OpenGraph = new Dictionary<string, string>();
+                }
+
+                return _OpenGraph;
             }
         }
 

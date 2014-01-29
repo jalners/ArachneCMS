@@ -20,4 +20,8 @@
 {
     <meta name="author" content="@Model.Author" />
 }
+@foreach (var item in Model.OpenGraph)
+{
+    <meta property="og:@item.Key" content="@item.Value" />
+}
 <meta property="fb:admins" content="stanislav.yarmonov"/>
