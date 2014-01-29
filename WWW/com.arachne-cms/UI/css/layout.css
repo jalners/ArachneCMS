@@ -157,3 +157,7 @@ code q {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
+a.retweet {
+  margin-left: 8px;
+  font-size: 80%;
+}
