@@ -430,7 +430,11 @@ span.copyright {
 
 
 /* testimonials */
-.testimonials .testimonial-item {
+.testimonials {
+    overflow: auto;
+}
+
+ .testimonial-item {
 	margin-bottom:20px;
 }
 

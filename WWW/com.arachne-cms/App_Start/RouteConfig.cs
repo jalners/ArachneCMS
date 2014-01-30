@@ -27,18 +27,23 @@ namespace WWW
                 constraints: new { id = @"^\d{4}-\d{2}-\d{2}-.*$" }
             );
 
+            var contentConstraints = new { category = @"^(about|contact|o-proekte)$" };
             routes.MapRoute(
                 name: "Content",
                 url: "{language}/{category}/{id}",
                 defaults: new { controller = "Content", action = "Index", id = UrlParameter.Optional },
-                constraints: new { category = @"^(about|contact)$" }
+                constraints: contentConstraints
             );
 
-            //routes.MapRoute(name: "ContentAboutImage", url: "{language}/about/{id}/{image}", defaults: new { controller = "Content", action = "Image", category = "about", id = UrlParameter.Optional });
-            //routes.MapRoute(name: "ContentAbout", url: "{language}/about/{id}", defaults: new { controller = "Content", action = "Index", category = "about", id = UrlParameter.Optional });
+            routes.MapRoute(
+                name: "ContentImage",
+                url: "{language}/{category}/{id}/{image}",
+                defaults: new { controller = "Content", action = "Image", id = UrlParameter.Optional },
+                constraints: contentConstraints
+            );
 
-            routes.MapRoute(name: "ReferenceGet", url: "reference/{*id}", defaults: new { controller = "Reference", action = "Index", id = UrlParameter.Optional });
-            routes.MapRoute(name: "BlogGet", url: "blog/{*id}", defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional });
+            //routes.MapRoute(name: "ReferenceGet", url: "reference/{*id}", defaults: new { controller = "Reference", action = "Index", id = UrlParameter.Optional });
+            //routes.MapRoute(name: "BlogGet", url: "blog/{*id}", defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional });
 
             routes.MapRoute(
                 name: "Default",

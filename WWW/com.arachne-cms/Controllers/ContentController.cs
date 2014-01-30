@@ -14,10 +14,10 @@ namespace WWW.Controllers
             PageModel model = new PageModel(this.HttpContext);
 
             string viewName = string.Format(
-                "~/content/{0}/{1}/{2}.cshtml",
+                "~/content/{0}/{1}/{2}/index.cshtml",
+                language,
                 category,
-                id,
-                language
+                id
             );
 
             return View(viewName, model);
@@ -28,10 +28,10 @@ namespace WWW.Controllers
             PageModel model = new PageModel(this.HttpContext);
 
             string path = string.Format(
-                "~/content/{0}/{1}/{3}",
+                "~/content/{0}/{1}/{2}/{3}",
+                language,
                 category,
                 id,
-                language,
                 image
             );
 
