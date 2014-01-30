@@ -14,7 +14,13 @@
 }
 /*.include-font("OpenSans-Bold", "OpenSans", 700, normal);*/
 /*.include-font("OpenSans-Extrabold", "OpenSans", 900, normal);*/
-/*.include-font("OpenSansCond-Light", "OpenSansCond", 300, normal);*/
+@font-face {
+  font-family: "OpenSansCond";
+  src: url('/UI/fonts/OpenSansCond-Light.eot');
+  src: url('/UI/fonts/OpenSansCond-Light.eot?#iefix') format('embedded-opentype'), url('/UI/fonts/OpenSansCond-Light.woff') format('woff'), url('/UI/fonts/OpenSansCond-Light.ttf') format('truetype'), url('/UI/fonts/OpenSansCond-Light.svg#font') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
 @font-face {
   font-family: "OpenSansCond";
   src: url('/UI/fonts/OpenSansCond-Bold.eot');
@@ -57,6 +63,18 @@ sub {
   vertical-align: super;
   margin-left: 6px;
   color: #999;
+}
+.logo small {
+  margin-top: 2px;
+  font-family: OpenSansCond, 'Arial Narrow', 'Nimbus Sans L', sans-serif;
+  font-weight: normal;
+  display: block;
+  font-size: 17px;
+  color: #ccc;
+  white-space: nowrap;
+}
+nav#menu {
+  font-weight: bold;
 }
 .page-title {
   background: #e7402f;

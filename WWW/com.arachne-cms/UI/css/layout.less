@@ -35,7 +35,7 @@
 .include-font("OpenSans-Regular", "OpenSans", 400, normal);
 /*.include-font("OpenSans-Bold", "OpenSans", 700, normal);*/
 /*.include-font("OpenSans-Extrabold", "OpenSans", 900, normal);*/
-/*.include-font("OpenSansCond-Light", "OpenSansCond", 300, normal);*/
+.include-font("OpenSansCond-Light", "OpenSansCond", 300, normal);
 .include-font("OpenSansCond-Bold", "OpenSansCond", 700, normal);
 
 body {
@@ -65,10 +65,10 @@ sub {
 .logo {
     font-size: 32px;
     font-family: @fontSansCond;
-    font-weight:700;
+    font-weight: 700;
 
     img {
-        float:left;
+        float: left;
         margin-top: -15px;
         margin-right: 8px;
     }
@@ -80,6 +80,20 @@ sub {
         margin-left: 6px;
         color: #999;
     }
+
+    small {
+        margin-top: 2px;
+        font-family: OpenSansCond, 'Arial Narrow', 'Nimbus Sans L', sans-serif;
+        font-weight: normal;
+        display: block;
+        font-size: 17px;
+        color: #ccc;
+        white-space: nowrap;
+    }
+}
+
+nav#menu {
+    font-weight: bold;
 }
 
 .page-title {
