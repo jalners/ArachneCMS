@@ -21,125 +21,116 @@
     <div id="wrap" class="boxed">
         <header>
             <div class="top-bar">
-            <div class="container clearfix">
-            <div class="slidedown">
-        
-                <div class="eight columns">
-                <div class="phone-mail">
-                    @*TODO:<a><i class="icon-phone"></i> Phone : +22 665 450 210</a>*@
-                    <a href="mailto:contact@arachne-cms.com"><i class="icon-envelope-alt"></i> Mail : contact@arachne-cms.com</a>
-                </div><!-- End phone-mail -->
+                <div class="container clearfix">
+                    <div class="slidedown">
+                        <div class="eight columns">
+                            <div class="phone-mail">
+                                @*TODO:<a><i class="icon-phone"></i> Phone : +22 665 450 210</a>*@
+                                <a href="mailto:contact@arachne-cms.com"><i class="icon-envelope-alt"></i> Mail : contact@arachne-cms.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="eight columns">
+                            @Html.Partial("SocialIcons")
+                        </div>
+                    </div>
                 </div>
-                <div class="eight columns">
-                    @Html.Partial("SocialIcons")
-                </div><!-- End social-icons -->
-          
-                </div><!-- End slidedown -->
-            </div><!-- End Container -->
-       
-            </div><!-- End top-bar -->
+            </div>
      
             <div class="main-header">
-            <div class="container clearfix">
-                <a href="#" class="down-button"><i class="icon-angle-down"></i></a><!-- this appear on small devices -->
-                <div style="float: left"> @*TODO:Style to CSS*@
-                <div class="logo">
-                    <a href="/">
-                    <img src="/UI/img/logo.png" alt="Arachne CMS" />
-                    Arachne CMS<sup>0.0.1</sup>@*TODO:Get version automatically*@
-                    </a>
-                </div>
-                </div><!-- End Logo -->
+                <div class="container clearfix">
+                    <a href="#" class="down-button"><i class="icon-angle-down"></i></a> @*TODO:this appear on small devices*@
+                    <div style="float: left"> @*TODO:Style to CSS*@
+                        <div class="logo">
+                            <a href="/">
+                                <img src="/UI/img/logo.png" alt="Arachne CMS" />
+                                Arachne CMS<sup>0.0.1</sup>@*TODO:Get version automatically*@
+                            </a>
+                        </div>
+                    </div>
          
-                <div style="float: right"> @*TODO:Style to CSS*@
-                <nav id="menu" class="navigation" role="navigation">
-                    <a href="#">Show navigation</a><!-- this appear on small devices -->
-                    <ul id="nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#TODO:">About</a></li>
-                        <li><a href="#TODO:">Features</a></li>
-                        <li><a href="#TODO:">Blog</a></li>
-                        <li><a href="#TODO:">Contact</a></li>
-                    </ul>
-                </nav>
-            </div><!-- End Menu -->
-       
-            </div><!-- End Container -->
-            </div><!-- End main-header -->
-        </header><!-- <<< End Header >>> -->
+                    <div style="float: right"> @*TODO:Style to CSS*@
+                        <nav id="menu" class="navigation" role="navigation">
+                            <a href="#">Show navigation</a> @*TODO:this appear on small devices*@
+                            <ul id="nav">
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="#TODO:">About</a></li>
+                                <li><a href="#TODO:">Features</a></li>
+                                <li><a href="#TODO:">Blog</a></li>
+                                <li><a href="#TODO:">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         @RenderBody()
 
         <footer>
             <div class="footer-top">
-            <div class="container clearfix">
+                <div class="container clearfix">
+                    <div class="one-third column widget">
+                        <h3 class="title">Latest Tweets</h3>
+                        <div id="tweets-footer" class='tweet query footer'></div>
+                    </div>
         
-            <div class="one-third column widget">
-                <h3 class="title">Latest Tweets</h3>
-                <div id="tweets-footer" class='tweet query footer'></div><!-- Tweets Code -->
-            </div><!-- End Tweets Widget -->
+                    <div class="one-third column widget">
+                        <h3 class="title">Flickr Stream</h3>
+                        <ul id="footer" class="thumbs"></ul>
+                    </div>
         
-            <div class="one-third column widget">
-                <h3 class="title">Flickr Stream</h3>
-                <ul id="footer" class="thumbs"></ul> <!-- Flickr Code -->
-            </div><!-- End Flickr Widget -->
-        
-            <div class="one-third column widget">
-                <div class="subscribe"> 
-                <h3 class="title">Subscribe</h3>
-                <p>Subscribe to our email newsletter to receive our news and updates.</p>
-                <form id="form-subscribe" action="#">
-                    <input type="text" class="mail" placeholder="yourmail@domain.com" />
-                    <input type="submit" value="Subscribe" class="submit" />
-                </form>
+                    <div class="one-third column widget">
+                        <div class="subscribe"> 
+                        <h3 class="title">Subscribe</h3>
+                        <p>Subscribe to our email newsletter to receive our news and updates.</p>
+                        <form id="form-subscribe" action="#">
+                            <input type="text" class="mail" placeholder="yourmail@domain.com" />
+                            <input type="submit" value="Subscribe" class="submit" />
+                        </form>
+                        </div>
+                    </div>
                 </div>
-            </div><!-- End Subscribe Widget -->
-        
-            </div><!-- End container -->
-            </div><!-- End footer-top -->
+            </div>
      
             <div class="footer-down">
-            <div class="container clearfix">
+                <div class="container clearfix">
+                    <div class="eight columns">
+                        <span class="copyright">
+                            © 2013-@(DateTime.Today.Year) <a href="#TODO:">Stanislav S. Yarmonov</a>. All Rights Reserved.
+                        </span>
+                    </div>
         
-            <div class="eight columns">
-                <span class="copyright">
-                    © Copyright 2013-@(DateTime.Today.Year) Stanislav S. Yarmonov. All Rights Reserved.
-                </span>
-            </div><!-- End copyright -->
-        
-            <div class="eight columns">
-                @Html.Partial("SocialIcons")
-            </div><!-- End social icons -->
-        
-            </div><!-- End container -->
-            </div><!-- End footer-top -->
+                    <div class="eight columns">
+                        @Html.Partial("SocialIcons")
+                    </div>
+                </div>
+            </div>
      
-        </footer><!-- <<< End Footer >>> -->
+        </footer>
     </div>
 
     @Html.Partial("Counters", Model)
 
-    <!-- Start JavaScript -->
-    <script src="/js/jquery-1.9.1.min.js"></script> <!-- jQuery library -->
-    <script src="/js/jquery.easing.1.3.min.js"></script> <!-- jQuery Easing --> 
-    <script src="/js/jquery-ui/jquery.ui.core.js"></script> <!-- jQuery Ui Core-->
-    <script src="/js/jquery-ui/jquery.ui.widget.js"></script> <!-- jQuery Ui Widget -->
-    <script src="/js/jquery-ui/jquery.ui.accordion.js"></script> <!-- jQuery Ui accordion--> 
-    <script src="/js/jquery-cookie.js"></script> <!-- jQuery cookie -->  
-    <script src="/js/ddsmoothmenu.js"></script> <!-- Nav Menu ddsmoothmenu -->
-    <script src="/js/jquery.flexslider.js"></script> <!-- Flex Slider  -->
-    <script src="/js/colortip.js"></script> <!-- Colortip Tooltip Plugin  -->
-    <script src="/js/tytabs.js"></script> <!-- jQuery Plugin tytabs  -->
-    <script src="/js/jquery.ui.totop.js"></script> <!-- UItoTop plugin  -->
-    <script src="/js/carousel.js"></script> <!-- jQuery Carousel  -->
-    <script src="/js/jquery.isotope.min.js"></script> <!-- Isotope Filtering  -->
-    @*TODO:<script src="/js/twitter/jquery.tweet.js"></script> <!-- jQuery Tweets -->*@
-    @*TODO:<script src="/js/jflickrfeed.min.js"></script> <!-- jQuery Flickr -->*@
-    @*TODO:<script src="/js/social-options.js"></script> <!-- social options , twitter, flickr.. -->*@
-    <script src="/js/doubletaptogo.js"></script> <!-- Touch-friendly Script  -->
-    <script src="/js/fancybox/jquery.fancybox.js"></script> <!-- jQuery FancyBox -->
-    <script src="/js/jquery.sticky.js"></script> <!-- jQuery Sticky -->
-    <script src="/js/custom.js"></script> <!-- Custom Js file for javascript in html -->
-    <!-- End JavaScript -->
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/jquery.easing.1.3.min.js"></script>
+    <script src="/js/jquery-ui/jquery.ui.core.js"></script>
+    <script src="/js/jquery-ui/jquery.ui.widget.js"></script>
+    <script src="/js/jquery-ui/jquery.ui.accordion.js"></script>
+    <script src="/js/jquery-cookie.js"></script>
+    <script src="/js/ddsmoothmenu.js"></script>
+    <script src="/js/jquery.flexslider.js"></script>
+    <script src="/js/colortip.js"></script>
+    <script src="/js/tytabs.js"></script>
+    <script src="/js/jquery.ui.totop.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/jquery.isotope.min.js"></script>
+    @*TODO:<script src="/js/twitter/jquery.tweet.js"></script>*@
+    @*TODO:<script src="/js/jflickrfeed.min.js"></script>*@
+    @*TODO:<script src="/js/social-options.js"></script>*@
+    <script src="/js/doubletaptogo.js"></script>
+    <script src="/js/fancybox/jquery.fancybox.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/custom.js"></script>
 </body>
 </html>
