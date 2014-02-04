@@ -194,6 +194,7 @@
     <Content Include="css\switcher\style.css" />
     <Content Include="googlea618a73fcee6b9d3.html" />
     <Content Include="images\img\sliders\logo-slide.png" />
+    <Content Include="sitemap.xml" />
     <Content Include="UI\favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images\favicon.ico" />
