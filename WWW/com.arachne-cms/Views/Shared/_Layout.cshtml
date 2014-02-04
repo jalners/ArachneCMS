@@ -133,5 +133,15 @@
     <script src="/js/fancybox/jquery.fancybox.js"></script>
     <script src="/js/jquery.sticky.js"></script>
     <script src="/js/custom.js"></script>
+    @*TODO:Remove when no todo links left*@
+    <script>
+        $(document).ready(function () {
+            $("a.todo").click(function () {
+                console.log("TODO:");
+                alert("Этот раздел находится в работе, но скоро будет опубликован. Чтобы легче было определить разделы, которые не готовы, можно ориентироваться по подчеркиванию ссылки красной пунктирной линией.");
+                return false;
+            });
+        });
+    </script>
 </body>
 </html>

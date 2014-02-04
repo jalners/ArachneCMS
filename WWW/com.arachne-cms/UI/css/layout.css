@@ -160,15 +160,8 @@ code q {
   font-family: OpenSansCond, "Arial Narrow", sans-serif;
   font-size: 16px;
 }
-.todo {
-  background: #e7402f;
-  padding: 16px;
-  margin: 8px 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+a.todo {
+  border-bottom: dotted 1pt #f00;
 }
 a.retweet {
   margin-left: 8px;
