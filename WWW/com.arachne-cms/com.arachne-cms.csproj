@@ -128,6 +128,7 @@
     <Content Include="content\ru\o-proekte\platforma\instrumenty.jpg" />
     <Content Include="content\ru\o-proekte\sistema-tsennostey\tsennost.jpg" />
     <Content Include="content\blog\2014\01\30\dzen.jpg" />
+    <Content Include="content\ru\wiki\gravitatsiya-koda\gravitatsiya.jpg" />
     <Content Include="css\base.css" />
     <Content Include="css\bg\back_pattern.jpg" />
     <Content Include="css\bg\black_mamba.jpg" />
@@ -430,6 +431,7 @@
     <Content Include="content\contact\stanislav-yarmonov\ru.cshtml" />
     <Content Include="content\ru\_ViewStart.cshtml" />
     <Content Include="content\ru\o-proekte\platforma\index.cshtml" />
+    <Content Include="content\ru\wiki\gravitatsiya-koda\index.cshtml" />
     <None Include="Properties\PublishProfiles\www.arachne-cms.com %28debug%29.pubxml" />
     <Content Include="UI\fonts\OpenSansCond-Bold.eot" />
     <Content Include="UI\fonts\OpenSansCond-Bold.ttf" />

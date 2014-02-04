@@ -27,7 +27,7 @@ namespace WWW
                 constraints: new { id = @"^\d{4}-\d{2}-\d{2}-.*$" }
             );
 
-            var contentConstraints = new { category = @"^(about|contact|o-proekte)$" };
+            var contentConstraints = new { category = @"^(about|contact|o-proekte|wiki)$" };
             routes.MapRoute(
                 name: "Content",
                 url: "{language}/{category}/{id}",
