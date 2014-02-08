@@ -156,6 +156,9 @@ code em {
 code q {
   color: #3b6;
 }
+code a {
+  color: #35afb0 !important;
+}
 #menu a {
   font-family: OpenSansCond, "Arial Narrow", sans-serif;
   font-size: 16px;
@@ -173,4 +176,12 @@ p.copyright {
 }
 p.copyright .social {
   color: #999;
+}
+.main-content h2 strong {
+  font-size: 120px;
+  float: left;
+  padding: 8px 16px;
+  line-height: 32px;
+  margin-top: 26px;
+  margin-bottom: 16px;
 }
